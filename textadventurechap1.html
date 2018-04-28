@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="textadventure.css">
+    <script
+src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+}
+    </script>
+    <h1>An mysterious merchant appears uppon you. Will you take his givings?</h1>
+<b>Put Your Response Here</b>
+<div id="txt"></div>
+Here:
+  </head>
+  <body>
+      <input type= "text" id="picture_URL"/>
+      <button>Continue!</button>
+    <p id="answer"></p>
+      <script type="text/javascript">
+        let level = 1
+        $("button").on("click", () => {
+          const response = $("input#picture_URL").val();
+          console.log(level)
+          if (level == 1 && response == "No") {
+            $("h1").html("Good Job. After not taking is givings, you decided to continue with you journey in the river village of Ciyo. You hero, what will you call yourself? Hint: People call there passwords, password.");
+              level = 2
+              $("#answer").empty();
+          }
+          if (level == 2 && response == "Name"){
+            $("h1").html("Alright, name. Thats a weird name. But, Ok. You get to the spirit river and the end of the villiage, will you trust the spirits and jump into the river? Hint: the spirits are your bois");
+              level = 3
+          $("#answer").empty();
+          }
+
+          if (level == 3 && response == "Yes"){
+            $("h1").html("Alright the sprits are yo bois. But wil you grab on to the mysterious rope to get out of the ancient river? Hint: Who holding the rope?");
+            level = 4
+                $("#answer").empty();
+          }
+
+          if (level == 4 && response == "Naw"){
+            $("h1").html("How much of your might in, percents, will you use to get yourself out of the water?");
+            level = 5
+                $("#answer").empty();
+          }
+          if (level == 5 && response >= 50){
+          $("h1").html("Wow your enthusiastic! Will you use the sword or the stick to kill the man, who almost shot you. Wait What?");
+          level = 6
+              $("#answer").empty();
+          }
+
+          if (level == 6 && response == Sword){
+          $("h1").html("Good Job! boiiiiiii ggggggggggggggg: FRIENDSHIP IS MAGIC! MY LITTLE PONY GAYAYGYAGGAYGYGYGYGAYGYAGYAGYAGYAGYAGYA");
+          level = 7
+              $("#answer").empty();
+          }
+
+            else{
+              $("p#answer").append("You ded")
+            }
+
+          console.log
+        });
+      </script>
+    </body>
+  </html>
+
+<!--when coding jquery/js syntax for getting value (of id) is: $("idname").val();--->
+<!--Answer stage1: No-->
+<!--Answer stage2: Name-->
+<!--Answer stage3: Yes-->
+<!--Answer stage4: Naw-->
+<!--Answer stage5: (50 or more)-->
+<!--Answer stage6: Sword-->
+<!--The type of 5 is a number-->
+<!--The type of 'apples' is a string-->
+<!--typeof *value* give the type of the value-->
+<!-- math console.log(10 / 5); would give you the Answer-->
+<!--the % (modulus) divides 2 numbers and returns the remainder  console.log(10 % 5);-->
+<!-- console.log(10 === 10) would give true, because true, console.log(10 !== 10) is false, you are also not limited to numerical values, you can use 'strings' console.log('same' === 'same') would give true-->
+<!-- to compare can use >, <, >=, <= -->
+<!-- true or false is a value, type of would give: boolean-->
+<!--the first character has an index of 0: console.log('happy'[0]); would print h-->
+<!-- all strings have .length: console.log('happy'.length); would give: 5 (the number of characters)-->
